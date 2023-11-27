@@ -254,8 +254,36 @@ buttons[11].addEventListener("click", () => {
   aboutSong.innerText = "Music has the power to uplift your mood and also makes you feel  the warmth of emotions in the most memorable ways. 'Aisay Kaisay' was released in 2020.";
 });
 
+buttons[12].addEventListener("click", () => {
+  icon.src = "./assets/Image/play.png";
+  photo.src = "./assets/Image/1.jpeg";
+  song.src = "./assets/Songs/lolipop.mp3";
+  songName.innerText = "Lollypop Lagelu";
+  songBy.innerText = "Pawan Singh";
+  title.innerText = "Lollypop Lagelu";
+  download.href = "./assets/Songs/lolipop.mp3";
+  aboutSong.innerText = "This song is the most popular song of bihar. ";
+});
 
 
 
 
+
+// FEEDBACK FORM SUBMISSION
+document.addEventListener("DOMContentLoaded", function () {
+  const feedbackForm = document.getElementById("feedbackForm");
+
+  feedbackForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const feedbackTextarea = document.getElementById("feedbackTextarea");
+    const userFeedback = feedbackTextarea.value;
+
+    // You can customize this part to handle the feedback (e.g., send it to a server).
+    console.log("User Feedback:", userFeedback);
+
+    // Clear the textarea after submission
+    feedbackTextarea.value = "";
+  });
+});
 
