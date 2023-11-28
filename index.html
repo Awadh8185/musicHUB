@@ -35,18 +35,24 @@
         <div class="icon cancel-btn">
           <i class="fas fa-times"></i>
         </div>
+
         <li><a href="#play">PLAY</a></li>
         <li><a href="#songs">CHOOSE SONG</a></li>
+        <li><a href="playlist.html">PLAYLIST</a></li>
         <li><a href="#about">ABOUT SONG</a></li>
         <li><a href="#contact">CONTACT</a></li>
         <li><a href="login.html">LOGIN</a></li>
         <li><a href="signup.html">SIGN UP</a></li>
         <li><a href="aboutDEV.html">ABOUT DEVELOPER</a></li>
         
+        
 
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>
+      </div>
+      <div class="searchtop-btn">
+        <button onclick="scrollToChooseSong()">SEARCH</button>
       </div>
     </div>
   </nav>
@@ -167,7 +173,12 @@
   <!-- Import JS File -->
   <script src="./JS/script.js"></script>
   <script src="./RegisterServiceWorker.js"></script>
-
+  <script>
+    function scrollToChooseSong() {
+      // Scroll to the "Choose a song" section
+      document.getElementById('songs').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 
 
   

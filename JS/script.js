@@ -256,7 +256,7 @@ buttons[11].addEventListener("click", () => {
 
 buttons[12].addEventListener("click", () => {
   icon.src = "./assets/Image/play.png";
-  photo.src = "./assets/Image/1.jpeg";
+  photo.src = "./assets/Image/1.jpg";
   song.src = "./assets/Songs/lolipop.mp3";
   songName.innerText = "Lollypop Lagelu";
   songBy.innerText = "Pawan Singh";
@@ -286,4 +286,24 @@ document.addEventListener("DOMContentLoaded", function () {
     feedbackTextarea.value = "";
   });
 });
+
+//search//
+
+function searchSongs() {
+  // Get the user's input
+  var searchTerm = document.getElementById('songSearchInput').value.toLowerCase();
+
+  // Get all song buttons
+  var songButtons = document.querySelectorAll('.btn');
+
+  // Loop through each button and hide/show based on the search term
+  songButtons.forEach(function(button) {
+    var buttonText = button.innerText.toLowerCase();
+    if (buttonText.includes(searchTerm)) {
+      button.style.display = 'block';
+    } else {
+      button.style.display = 'none';
+    }
+  });
+}
 
